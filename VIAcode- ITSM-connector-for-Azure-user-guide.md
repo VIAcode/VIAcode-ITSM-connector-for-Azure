@@ -1,28 +1,23 @@
 # VIAcode ITSM connector for Azure user guide
-This guide is based on version of the ITSM Connector for Azure **1.0**.
+This guide is based on version of the ITSM Connector for Azure **1.1**.
 
 <!-- TOC -->
 
-- [Before you begin](#before-you-begin)
-  - [Deploy from Azure Marketplace](#deploy-from-azure-marketplace)
-    - [Pricing](#pricing)
-
-- [Configuration of VIAcode ITSM connector for Azure](#configuration-of-viacode-itsm-connector-for-azure)
-  - [Basics](#basics)
-  - [Settings](#settings)
-  - [Review and create](#review-and-create)
-  - [Alert state backward synchronization](#alert-state-backward-synchronization)
-    - [Overview](#overview)
-    - [How to setup](#how-to-setup)
-- [Uninstallation of VIAcode ITSM connector for Azure](#uninstallation-of-viacode-itsm-connector-for-azure)
-  - [Deletion Notes](#deletion-notes)
-  - [Steps to Remove Application and Managed Resource Group](#steps-to-remove-application-and-managed-resource-group)  
-  
-- [Technical details](#technical-details)
-  - [Supported alert types](#supported-alert-types)
 <!-- TOC END -->
 
 ## Overview
+
+Here you can see overview table of all supported features by VIAcode ITSM connector for Azure. 
+
+
+
+| Feature                         | Backward synchronization (VIMS to Azure) | Detection time                                               | Prerequisite                  |
+| ------------------------------- | ---------------------------------------- | ------------------------------------------------------------ | ----------------------------- |
+| Azure Monitor Alerts            | yes                                      | All signals after connector installation                     |                               |
+| Budget Alerts                   | -                                        | All alerts in subscription with "Active" state               |                               |
+| Security Center Alerts          | yes                                      | All active Security Center Alerts                            | Standard tier must be enabled |
+| Advisor Recommendations         | -                                        | All new and updated Recommendations after connection installation |                               |
+| Security Center Recommendations | -                                        | All new and updated Recommendations after connection installation |                               |
 
 
 
