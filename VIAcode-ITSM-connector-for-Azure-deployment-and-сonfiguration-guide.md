@@ -18,6 +18,8 @@
 - [Technical details](#technical-details)
   - [Supported alert types](#supported-alert-types)
 <!-- TOC END -->
+  
+  This guide is based on version **1.0** of the ITSM connector for Azure. 
 
 ## Before you begin
 
