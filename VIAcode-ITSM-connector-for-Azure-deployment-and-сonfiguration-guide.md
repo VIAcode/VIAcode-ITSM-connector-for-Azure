@@ -19,6 +19,8 @@
   - [Supported alert types](#supported-alert-types)
 <!-- TOC END -->
 
+This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
+
 ## Before you begin
 
 Verify that your account user type is not Guest in the chosen tenant.
@@ -134,12 +136,10 @@ VIAcode ITSM connector for Azure can process the following Azure alert types:
 - Metric Alerts
 
   - Platform
-
 - Log Alerts
 
   - Log Analytics
   - Application Insights
-
 - Activity Log Alerts
 
   - Activity Log - Administrative
@@ -148,7 +148,10 @@ VIAcode ITSM connector for Azure can process the following Azure alert types:
   - Activity Log - Security
   - Service Health
   - Resource Health
-  
 - Security Center Alerts
-
 - Cost alerts: budget alerts
+
+
+
+## How-to guide
+For more information about VIAcode ITSM connector features and use cases please read ["VIAcode ITSM connector for Azure user guide"](VIAcode- ITSM-connector-for-Azure-user-guide.md)

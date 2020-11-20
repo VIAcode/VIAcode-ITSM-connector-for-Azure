@@ -7,6 +7,8 @@ This guide is based on version of the ITSM Connector for Azure **1.1**.
 
 ## Overview
 
+Thank you for choosing VIAcode ITSM connector for Azure. This document will help you start using connector to monitor and track issues with your resources and services in Azure.
+
 Here you can see overview table of all supported features by VIAcode ITSM connector for Azure. 
 
 
