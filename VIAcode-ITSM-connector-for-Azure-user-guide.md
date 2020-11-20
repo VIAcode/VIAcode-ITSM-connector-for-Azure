@@ -13,13 +13,13 @@ Here you can see overview table of all supported features by VIAcode ITSM connec
 
 
 
-| Feature                         | Backward synchronization (VIMS to Azure) | Detection time                                               | Prerequisite                  |
-| ------------------------------- | ---------------------------------------- | ------------------------------------------------------------ | ----------------------------- |
-| Azure Monitor Alerts            | yes                                      | All signals after connector installation                     |                               |
-| Budget Alerts                   | -                                        | All alerts in subscription with "Active" state               |                               |
-| Security Center Alerts          | yes                                      | All active Security Center Alerts                            | Standard tier must be enabled |
-| Advisor Recommendations         | -                                        | All new and updated Recommendations after connection installation |                               |
-| Security Center Recommendations | -                                        | All new and updated Recommendations after connection installation |                               |
+| Feature                         | Backward synchronization (VIMS to Azure) | Detection time                                               | Prerequisite                  | Supported ITSM tool |
+| ------------------------------- | ---------------------------------------- | ------------------------------------------------------------ | ----------------------------- | ------------------- |
+| Azure Monitor Alerts            | yes                                      | All signals after connector installation                     |                               | VIMS                |
+| Budget Alerts                   | -                                        | All alerts in subscription with "Active" state               |                               | VIMS                |
+| Security Center Alerts          | yes                                      | All active Security Center Alerts                            | Standard tier must be enabled | VIMS                |
+| Advisor Recommendations         | -                                        | All new and updated Recommendations after connection installation |                               | VIMS                |
+| Security Center Recommendations | -                                        | All new and updated Recommendations after connection installation |                               | VIMS                |
 
 
 
@@ -53,4 +53,16 @@ Here you can see overview table of all supported features by VIAcode ITSM connec
 
 ## Features
 ### Sync Azure Signals button
+
+The [Sync Azure Signals] button allows you sync active Security Alerts and Advisor recommendations created prior ITSM connector installation in your subscription.
+
+
+
+## Frequently asked questions
+
+### How many subscriptions supports ITSM connector? 
+
+**Answer:** One ITSM connector can monitor one subscription.  In order to monitor more subscriptions you need install new connector to each and connect to an ITSM tool. One ITSM tool support monitoring as much subscriptions as your performance tier allows. 
+
+Currently supported ITSM tool: VIMS. 
 
