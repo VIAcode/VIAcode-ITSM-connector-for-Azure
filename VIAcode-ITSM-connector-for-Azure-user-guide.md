@@ -68,13 +68,23 @@ Azure Monitor Alerts (Metric, Log Analytics, Activity log etc.) will be automati
 ## ? Azure Advisor recommendations
 #### Intro
 
-Azure Advisor recommendations will be automatically created in your ticketing system with detailed information about incidents since connector installation to the subscription. 
+Azure Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. The recommendations divided into five categories: Reliability, Security, Performance, Operational Excellence, Cost. 
 
-#### Use Case. Create Cost Recommendation and get it in VIMS
+Azure Advisor recommendations will be automatically created in your ticketing system with detailed information about resources and recommended actions. By default, connector creates tickets in ITSM tool for new recommendations or recommendations that have been  updated at a time after connector installation to the subscription.  Prior created recommendations in Azure can be retrieved to system by [Sync Azure signals] button. 
+
+#### Use Case. Detect Cost recommendation
+
+Learn how to get Advisor recommendation in ITSM tool based on Cost recommendation. 
+
+Here you can see ticket created in "New recommendations" group in ITSM tool VIMS for active cost recommendation in Azure Advisor. Ticket contains recommendation name, link to affected resource and subscription. Button [View in Azure portal] opens recommendation in Azure portal for the authenticated user. 
+
+ ![vimsCostRecommendation](./media/vimsCostRecommendation.png)
 
 
 
-#### Repeat Count
+#### ?Repeat Count
+
+
 
 ## ? Azure Security Center Recommendations
 
