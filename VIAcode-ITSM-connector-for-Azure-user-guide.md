@@ -17,13 +17,14 @@ Here you can see an overview table of all supported features in VIAcode ITSM con
 
 
 
-| Feature                         | Backward synchronization (VIMS to Azure) | Detection time                                               | Prerequisite                  | Supported ITSM tool | Options                                                      |
-| ------------------------------- | ---------------------------------------- | ------------------------------------------------------------ | ----------------------------- | ------------------- | ------------------------------------------------------------ |
-| Azure Monitor Alerts            | yes                                      | All signals since connector installation                     |                               | VIMS                |                                                              |
-| Budget Alerts                   | -                                        | All alerts in subscription with "Active" state               |                               | VIMS                |                                                              |
-| Security Center Alerts          | yes                                      | All active  Security Center Alerts since connector installation | Standard tier must be enabled | VIMS                | It is possible sync prior created active alerts with [Sync Azure signals]  option |
-| Advisor Recommendations         | -                                        | All new and updated Recommendations since connection installation |                               | VIMS                | It is possible sync prior created recommendations with [Sync Azure signals]  option |
-| Security Center Recommendations | -                                        | All new and updated Recommendations since connection installation |                               | VIMS                |                                                              |
+| Feature                         | Backward synchronization    | Detection time                                               | Prerequisite                   | Supported ITSM tool | Options                                                      |
+| ------------------------------- | --------------------------- | ------------------------------------------------------------ | ------------------------------ | ------------------- | ------------------------------------------------------------ |
+| Azure Monitor Alerts            | yes (VIMS to Azure)         | All signals since connector installation                     |                                | VIMS                |                                                              |
+| Budget Alerts                   | no                          | All alerts in subscription with "Active" state               |                                | VIMS                |                                                              |
+| Security Center Alerts          | yes (VIMS to Azure)         | All active  Security Center Alerts since connector installation | Azure Defender must be enabled | VIMS                | It is possible sync prior created active alerts with [Sync Azure signals]  option |
+| Advisor Recommendations         | no                          | All new and updated Recommendations since connection installation |                                | VIMS                | It is possible sync prior created recommendations with [Sync Azure signals]  option |
+| Security Center Recommendations | no                          | All new and updated Recommendations since connection installation |                                | VIMS                |                                                              |
+| Integration with Azure DevOps   | yes (VIMS to Azure DevOps ) |                                                              |                                | VIMS                |                                                              |
 
 ## VIMS 
 
@@ -31,9 +32,23 @@ ITSM ticketing system VIMS (VIAcode Incident Management system) simplifies engin
 
 ### Groups of signals
 
- By default, ticket on new active alerts (from Azure Monitor, Security Alerts, Budget Alerts)  will be created in "New incidents" group.   Notifications about Active Azure Advisor recommendations appear in "New recommendations" group. 
+ By default, ticket on new active alerts (from Azure Monitor, Security Alerts, Budget Alerts)  will be created in "New incidents" group.   Notifications from Active Azure Advisor recommendations appear in "New recommendations" group. 
 
 ![vimsPanel](./media/vimsPanel.png)
+
+
+
+### ?New incidents group
+
+"New incidents"
+
+![newIncidents](.\media\newIncidents.png)
+
+### ?New recommendations group
+
+
+
+
 
 ###  Managing different subscriptions
 
@@ -65,33 +80,66 @@ Azure Monitor Alerts (Metric, Log Analytics, Activity log etc.) will be automati
 - 
 #### Use Case. Create Budget and get it in VIMS
 
-## ? Azure Advisor recommendations
-#### Intro
+## Azure Advisor recommendations
+### Introduction
 
 Azure Advisor is a personalized cloud consultant that helps you follow best practices to optimize your Azure deployments. The recommendations divided into five categories: Reliability, Security, Performance, Operational Excellence, Cost. 
 
-Azure Advisor recommendations will be automatically created in your ticketing system with detailed information about resources and recommended actions. By default, connector creates tickets in ITSM tool for new recommendations or recommendations that have been  updated at a time after connector installation to the subscription.  Prior created recommendations in Azure can be retrieved to system by [Sync Azure signals] button. 
+Azure Advisor recommendations will be automatically created in your ticketing system with detailed information about resources and recommended actions. By default, connector creates tickets in ITSM tool for new recommendations or recently updated recommendations with new resources (recommendations that have been  updated at a time after connector installation to the subscription).  
 
-#### Use Case. Detect Cost recommendation
+Prior created recommendations in Azure can be retrieved to system using [Sync Azure signals] button.  
 
-Learn how to get Advisor recommendation in ITSM tool based on Cost recommendation. 
 
-Here you can see ticket created in "New recommendations" group in ITSM tool VIMS for active cost recommendation in Azure Advisor. Ticket contains recommendation name, link to affected resource and subscription. Button [View in Azure portal] opens recommendation in Azure portal for the authenticated user. 
+
+### Recommendation detection
+
+Once new recommendation appeared in Azure Advisor it will be automatically detected by the ITSM connector, and a new ticket will be created in "New recommendations" group for the ITSM tool VIMS.
+
+Here you can see ticket for active cost recommendation in Azure Advisor. Ticket contains recommendation name, link to affected resource and subscription id. Link [View in Azure portal] opens recommendation in Azure portal for the authenticated user. 
 
  ![vimsCostRecommendation](./media/vimsCostRecommendation.png)
 
 
 
-#### ?Repeat Count
+### Repeat count
+
+Advisor recommendation can be applied to multiple resources.
+
+For each new impacted resource ITSM tool VIMS calculates number of the affected resources increasing  "Repeat count"  setting by one. Each new impacted resource will appear in a new ***article*** for the existing recommendation with a link to it on Azure portal. 
+
+![recommendationsRepeatCount](.\media\recommendationsRepeatCount.png)
+
+## ?Azure Security Center alerts 
+### Introduction
+
+ITSM connector supports Security Center threat protection capability. New incident ticket will be created on any active threat protection alert in you Azure subscription.
+
+#### Prerequisites
+
+To get started with Security Center alerts notification in your ITSM system [ **Azure Defender** ](https://docs.microsoft.com/en-us/azure/security-center/security-center-pricing#free-option-vs-azure-defender-enabled) feature  should be enabled in Azure. Azure Defender is a Security Center feature that provides unified monitoring of networks, machines, and cloud services for incoming attacks and post-breach activity. 
+
+### Security alert detection 
+
+Each new created security alert in Azure portal will be automatically detected by the ITSM connector, and a new ticket will be created in "New incidents" group for the ITSM tool VIMS. 
+
+Here you can see ticket for active Security alert. Ticket contains alert name, link to affected resource, subscription id and  alert details. [View in Azure portal] opens resource in Azure Portal for the authenticated user. 
+
+![SecurityAlert](.\media\SecurityAlert.png)
 
 
 
-## ? Azure Security Center Recommendations
+### Repeat count 
 
 
-## ? Azure Security Center Alerts 
+
+
+
+### Backward synchronization 
+
+
 
 ## Features
+
 ### Sync Azure signals
 
 The [Sync Azure signals] button allows you obtain active Security Alerts and Advisor recommendations created in your subscription prior ITSM connector installation.
@@ -122,11 +170,26 @@ Select types of signals to retrieve and click [Review+submit ] in Azure
 
 
 
-## Frequently asked questions
+### ? Azure DevOps integration
 
-### How many subscriptions does ITSM connector support? 
+? It is possible connect ITSM tool VIMS with Azure DevOps Organization. How to do it? 
+?Why
+Link to Azure DevOps... 
+
+![AzureDevOps](.\media\AzureDevOps.png)
+
+
+
+
+
+## ?Known limitations
+
+### ?How many subscriptions does ITSM connector support? 
 
 **Answer:** 
 
 
 
+
+
+[https://docs.microsoft.com/en-us/azure/security-center/security-center-pricing#free-option-vs-azure-defender-enabled]: 
