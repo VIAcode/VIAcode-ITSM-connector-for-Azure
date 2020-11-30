@@ -5,7 +5,7 @@
 
 <!-- TOC END -->
 
-## Overview
+## ?Overview
 
 This guide is based on a version of the ITSM Connector for Azure **1.1**. 
 
@@ -39,17 +39,19 @@ ITSM ticketing system VIMS (VIAcode Incident Management system) simplifies engin
 
 
 
-### ?New incidents group
+### New incidents group
 
-"New incidents"
+Active Azure alerts  can be seen in "New incidents" group under **Azure Connector(Customer)**  user. 
 
-![newIncidents](.\media\newIncidents.png)
-
-### ?New recommendations group
+![newIncidents](\media\newIncidents.png)
 
 
 
+### New recommendations group
 
+New Azure recommendations can be seen in "New recommendations" group under **Azure Connector(Customer)**  user. 
+
+![newRecommendations](.\media\newRecommendations.png)
 
 ###  Managing different subscriptions
 
@@ -57,29 +59,43 @@ One ITSM connector allows to monitor one subscription in VIMS.
 
 It is possible to monitor several subscriptions with same ITSM tool VIMS. For this, you need to install connector to each subscription and specify FQDN of same  ITSM ticketing system.
 
-## ?Azure Monitor Alerts
+## ?link to bckssync Azure Monitor Alerts
 
-#### Introduction
+### Introduction
 
-Azure Monitor Alerts (Metric, Log Analytics, Activity log etc.) will be automatically created in your ticketing system with detailed information about incidents since connector installation to the subscription. 
+Azure Monitor Alerts (Metric, Log Analytics, Activity log, Service Health) will be automatically created in your ticketing system with detailed information about incidents since connector installation to the subscription. ITSM connector supports backward synchronization of Azure Monitor alerts. 
 
-#### Use Case: Detect active Azure Metric Alert 
+### Azure Monitor alert detection
+
+Once new alert appeared in Azure Monitor it will be automatically detected by the ITSM connector, and a new ticket will be created in "New incidents" group for the ITSM tool VIMS.
+
+Here you can see ticket for active Azure Monitor Metric Alert. Ticket contains alert name, link to affected resource and subscription id. Link [View in Azure portal] opens alert in Azure portal for the authenticated user. 
+
+![AzureMonitorAlert](.\media\AzureMonitorAlert.png)
+
+### Repeat Count
+
+"Repeat count" setting for security alerts will indicate the number of alert repeats for the same resource. 
 
 
+## ?Cost Management budget alerts
+### Introduction
 
-#####  Backward sync 
+Budget alerts will be automatically created in your ticketing system with detailed information about incidents since connector installation to the subscription. 
 
-#### Use Case.  Generate Azure Activity Log  Alert and get it in VIMS
+### Budget alert detection
 
-### 
+Once active alert appeared in Cost Management it will be automatically detected by the ITSM connector, and a new ticket will be created in "New incidents" group for the ITSM tool VIMS. 
 
+Currently supported scope for budget alerts by ITSM connector: subscription. 
 
-## ? Azure Cost Management Alerts
-#### Introduction
-##### Options 
-- Only new created alerts detected
-- 
-#### Budget alert detection
+Here you can see ticket for active budget alert. Ticket contains alert name, current cost detected when alert was triggered in Azure for the first time, link to affected resource, and subscription id. Link [View in Azure portal] opens alert in Azure portal for the authenticated user.  
+
+![budgetAlert](.\media\budgetAlert.png)
+
+### Repeat Count
+
+"Repeat count" setting for budget alerts is not applicable. Each new alert appear for a specified reached budget threshold that configured in Azure portal. 
 
 ## Azure Advisor recommendations
 ### Introduction
@@ -113,9 +129,9 @@ For each new impacted resource ITSM tool VIMS calculates number of the affected 
 ## Azure Security Center alerts 
 ### Introduction
 
-ITSM connector supports Security Center threat protection capability. This means that any active threat protection alert in your Azure subscription will be detected and displayed as a ticket in the ITSM system. 
+ITSM connector supports Security Center threat protection capability. This means that any active threat protection alert in your Azure subscription will be detected and displayed as a ticket in the ITSM system.  ITSM connector supports backward synchronization of Azure Monitor alerts. 
 
-#### Prerequisites
+### Prerequisites
 
 To get started with Security Center alerts notification in your ITSM system [ **Azure Defender** ](https://docs.microsoft.com/en-us/azure/security-center/security-center-pricing#free-option-vs-azure-defender-enabled) feature  should be enabled in Azure.
 
@@ -141,7 +157,7 @@ Here you can see ticket for active Security alert. Ticket contains alert name, l
 
 ### Sync Azure signals
 
-The [Sync Azure signals] button allows you obtain active Security Alerts and Advisor recommendations created in your subscription prior ITSM connector installation.
+The [Sync Azure signals] button allows you obtain active **Security Alerts** and **Advisor recommendations** created in your subscription **prior** ITSM connector installation.
 
 To get prior incidents and recommendations in your ITSM tool perform the following steps: 
 
@@ -167,42 +183,36 @@ Select types of signals to retrieve and click [Review+submit ] in Azure
 
 ![syncParameters-alerts-recommendations](./media/syncParameters-alerts-recommendations.png)
 
-### Backward synchronization
+### ?Backward synchronization
 
 Backward synchronization capability in ITSM Connector allows to close Azure signals right from the ITSM system without necessity go to Azure portal. 
 
-Backward synchronization option requires "Contributor" permissions for ITSM Connector to subscription. To check if you have Contributor permissions to Azure follow the [Configuration Guide](https://github.com/VIAcode/VIAcode-ITSM-connector-for-Azure/blob/main/VIAcode-ITSM-connector-for-Azure-deployment-and-configuration-guide.md#how-to-setup). 
+Backward synchronization option requires "Contributor" permissions for ITSM Connector to subscription. To check if you have Contributor permissions follow the [Configuration Guide](https://github.com/VIAcode/VIAcode-ITSM-connector-for-Azure/blob/main/VIAcode-ITSM-connector-for-Azure-deployment-and-configuration-guide.md#how-to-setup). 
 
-To see integrations that support backward synchronization follow the Overview section in 
-
-#### 
+To see integrations that support backward synchronization follow the Overview section in Overview 
 
 
 
-## ?Known limitations
+## Known limitations
 
-### ?How many subscriptions does ITSM connector support? 
+### Issue: I am getting ITSM connector service alerts (E.g. Advisor recommendation created) from another connector in the same subscription
 
-**Answer:** 
+#### Resolution: 
 
-
-
-
-
-[https://docs.microsoft.com/en-us/azure/security-center/security-center-pricing#free-option-vs-azure-defender-enabled]: 
+Supported scenario is installation of one connector per subscription. Multiple connector installations per subscription is not supported. 
 
 
 
-### Links
+## Links
 
-To gain better productivity and effectiveness working with Azure VIAcode provides additional services and tools that can be found by the following links.  
+To gain better productivity and effectiveness working with Azure you can use additional services and tools that can be found by the following links.  
 
 * [VIMS](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/viacode_consulting-1089577.viacode-itsm-z) - VIAcode Incident Management System for Azure. Powerful system that creates a process around alerts, recommendations and threats in order to foster individual and organizational accountability.
 * [VIAcode Azure DevOps](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/viacode_consulting-1089577.vims-azuredevops)  - Azure DevOps connector for VIAcode IMS (VIMS).  The Azure DevOps Connector for VIAcode IMS integrates VIAcode Incident  Management System (VIMS) with Azure DevOps to enabling end-to-end SRE  escalation process for your Azure operations.
 
-### ?Contact us
+## Contact us
 
-
+For more questions or feedbacks, please contact us:  [Contact VIacode](https://www.viacode.com/contact-us/)
 
 
 
