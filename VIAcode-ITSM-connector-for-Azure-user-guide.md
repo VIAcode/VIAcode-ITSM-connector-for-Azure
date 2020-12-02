@@ -83,7 +83,7 @@ In order to monitor several subscriptions with one ITSM tool you need to install
 
 Azure Monitor Alerts (Metric, Log Analytics, Activity log) will be automatically created in your ticketing system with detailed information about incidents since connector installation to the subscription.
 
-VIAcode ITSM connector for Azure supports  [backward synchronization](#backward synchronization)  with  Azure Monitor alerts. 
+VIAcode ITSM connector for Azure supports  [backward synchronization](#backward-synchronization)  with  Azure Monitor alerts. 
 
 ### Azure Monitor alert detection
 
@@ -124,7 +124,7 @@ Azure Advisor is a personalized cloud consultant that helps you follow best prac
 
 Azure Advisor recommendations will be automatically created in your ticketing system with detailed information about resources and recommended actions. By default, connector creates tickets in ITSM tool for new recommendations or recently updated recommendations - new affected resource detected (recommendations that have been  updated at a time after connector installation to the subscription).  
 
-Prior created recommendations in Azure can be retrieved to ITSM system using [[Sync Azure signals](#Sync Azure signals)] button.  
+Prior created recommendations in Azure can be retrieved to ITSM system using [[Sync Azure signals](#Sync-Azure-signals)] button.  
 
 ### Recommendation detection
 
@@ -149,7 +149,8 @@ For each new impacted resource number of the affected resources increasing  with
 
 VIAcode ITSM connector for Azure supports Security Center threat protection capability. This means that any active threat protection alert in your Azure subscription will be detected and displayed as a ticket in the ITSM system.
 
-VIAcode ITSM connector supports [backward synchronization](#backward synchronization) with Azure Monitor alerts. 
+VIAcode ITSM connector supports [backward synchronization](#backward-synchronization) with Azure Security Center alerts. 
+Prior created Security Center alerts  in Azure can be retrieved to ITSM system using [[Sync Azure signals](#Sync-Azure-signals)] button.  
 
 ### Prerequisites
 
