@@ -4,6 +4,26 @@ This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**.
 
 <!-
 
+- [Overview](#Overview)
+- [VIMS](#VIMS)
+	- [Groups of signals](#Groups of signals)
+	- [New incidents group](#New incidents group)
+	- [Managing different subscriptions](#Managing different subscriptions)
+- [Azure Monitor Alerts](#Azure Monitor Alerts)
+	- [Azure Monitor alert detection](#Azure Monitor alert detection)
+- [Cost Management budget alerts](#Cost Management budget alerts)
+	- [Budget alert detection](#Budget alert detection)
+- [Azure Advisor recommendations](#Azure Advisor recommendations)
+	- [Recommendation detection](#Recommendation detection)
+- [Azure Security Center alerts](#Azure Security Center alerts)
+	- [Secuirity alert detection](#Secuirity alert detection)
+- [Features](#Features)
+	- [Sync Azure signals](#Sync Azure signals)
+	- [Backward synchronization](#Backward synchronization)
+- [Known limitations](#Known limitations)
+- [Links](#Links)
+- [Contact us](#Contact us)
+
 [TOC]
 
 - TOC END -->
@@ -22,8 +42,6 @@ Here you can see an overview table of all supported features in VIAcode ITSM con
 | Budget Alerts                                  | no                       | All alerts in subscription with "Active" state               |                                | VIMS                |                                                              |
 | Security Center Alerts                         | yes                      | All active  Security Center Alerts created since connector installation | Azure Defender must be enabled | VIMS                | It is possible sync prior created active alerts using [Sync Azure signals]  option |
 | Advisor Recommendations                        | no                       | All new and updated Recommendations created since connector installation |                                | VIMS                | It is possible sync prior created recommendations using [Sync Azure signals]  option |
-|                                                |                          |                                                              |                                |                     |                                                              |
-
 ## VIMS 
 
 In order to manage different Azure notifications ITSM connector needs to be connected to IT service management system. VIAcode ITSM connector for Azure supports integration with ITSM ticketing system VIMS that stands for VIAcode Incident Management System.
@@ -42,7 +60,7 @@ By default, ticket on new active alerts (from Azure Monitor, Security Alerts, Bu
 
 Active Azure alerts  can be seen in "New incidents" group under **Azure Connector(Customer)**  user. 
 
-![newIncidents](\media\newIncidents.png)
+![newIncidents](./media/newIncidents.png)
 
 
 
@@ -50,7 +68,7 @@ Active Azure alerts  can be seen in "New incidents" group under **Azure Connecto
 
 New Azure recommendations can be seen in "New recommendations" group under **Azure Connector(Customer)**  user. 
 
-![newRecommendations](.\media\newRecommendations.png)
+![newRecommendations](./media/newRecommendations.png)
 
 ###  Managing different subscriptions
 
@@ -72,7 +90,7 @@ Once new alert appeared in Azure Monitor it will be automatically detected by th
 
 Here you can see ticket for active Azure Monitor Metric Alert. Ticket contains alert name, link to affected resource and subscription id. Link `[View in Azure portal]` opens alert in Azure portal for an authenticated user. 
 
-![AzureMonitorAlert](.\media\AzureMonitorAlert.png)
+![AzureMonitorAlert](./media/AzureMonitorAlert.png)
 
 ### Repeat Count
 
@@ -92,7 +110,7 @@ Currently supported scope for budget alerts by the VIAcode ITSM connector for Az
 
 On image below you can see ticket that has been generated for active budget alert. Ticket contains alert name, *current cost* detected when alert was triggered in Azure for the first time, link to affected resource, and subscription id. Link `[View in Azure portal]` opens alert in Azure portal for an authenticated user.  
 
-![budgetAlert](.\media\budgetAlert.png)
+![budgetAlert](./media/budgetAlert.png)
 
 ### Repeat Count
 
@@ -123,7 +141,7 @@ Advisor recommendation can be applied to multiple resources.
 
 For each new impacted resource number of the affected resources increasing  with "Repeat count"  setting updated by one. Each new impacted resource will appear in a new ***article*** for the existing recommendation with a link to it on Azure portal. 
 
-![recommendationsRepeatCount](.\media\recommendationsRepeatCount.png)
+![recommendationsRepeatCount](./media/recommendationsRepeatCount.png)
 
 ## Azure Security Center alerts 
 ### Introduction
@@ -142,7 +160,7 @@ Each new created security alert in Azure portal will be automatically detected b
 
 On image below you can see ticket for active Security alert. Ticket contains alert name, link to affected resource, subscription id and  alert details.`[View in Azure portal]`  opens link to resource in Azure Portal for an authenticated user. 
 
-![SecurityAlert](.\media\SecurityAlert.png)
+![SecurityAlert](./media/SecurityAlert.png)
 
 
 
