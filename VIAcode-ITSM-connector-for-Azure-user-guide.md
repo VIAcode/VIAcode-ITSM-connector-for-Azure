@@ -95,7 +95,7 @@ Here you can see ticket for active Azure Monitor Metric Alert. Ticket contains a
 
 ### Repeat Count
 
-"Repeat count" setting for security alerts will indicate the number of alert repeats for the same resource. 
+"Repeat count" setting for Azure Monitor alerts will indicate the number of alert repeats for the same resource. 
 
 
 ## Cost Management budget alerts
