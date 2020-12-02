@@ -1,5 +1,8 @@
 # VIAcode ITSM connector for Azure deployment and configuration guide
+This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
+
 <!-- TOC -->
+
 - [Before you begin](#before-you-begin)
   - [Deploy from Azure Marketplace](#deploy-from-azure-marketplace)
     - [Pricing](#pricing)
@@ -20,7 +23,7 @@
 - [How-to guide](#how-to guide)
 <!-- TOC END -->
 
-This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
+
 
 ## Before you begin
 
@@ -156,3 +159,9 @@ VIAcode ITSM connector for Azure can process the following Azure alert types:
 
 ## How-to guide
 For more information about VIAcode ITSM connector features and use cases please read ["VIAcode ITSM connector for Azure user guide"](VIAcode-ITSM-connector-for-Azure-user-guide.md)
+
+
+
+[TOC]
+
+
