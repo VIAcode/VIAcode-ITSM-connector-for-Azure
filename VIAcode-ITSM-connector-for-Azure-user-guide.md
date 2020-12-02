@@ -6,7 +6,7 @@ This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**.
 
 - [Overview](#Overview)
 - [VIMS](#VIMS)
-	- [Groups of signals](#Groups-of- signals)
+	- [Groups of signals](#Groups-of-signals)
 	- [New incidents group](#New-incidents-group)
 	- [Managing different subscriptions](#Managing-different-subscriptions)
 - [Azure Monitor Alerts](#Azure-Monitor-Alerts)
@@ -16,13 +16,13 @@ This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**.
 - [Azure Advisor recommendations](#Azure-Advisor-recommendations)
 	- [Recommendation detection](#Recommendation-detection)
 - [Azure Security Center alerts](#Azure-Security-Center-alerts)
-	- [Secuirity alert detection](#Secuirity-alert-detection)
+	- [Security alert detection](#Security-alert-detection)
 - [Features](#Features)
 	- [Sync Azure signals](#Sync-Azure-signals)
 	- [Backward synchronization](#Backward-synchronization)
 - [Known limitations](#Known-limitations)
 - [Links](#Links)
-- [Contact us](#Contact- us)
+- [Contact us](#Contact-us)
 
 [TOC]
 
