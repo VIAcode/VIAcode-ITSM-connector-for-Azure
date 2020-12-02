@@ -2,8 +2,8 @@
 
 This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**. 
 
-<!-
 
+<!-- TOC -->
 - [Overview](#Overview)
 - [VIMS](#VIMS)
 	- [Groups of signals](#Groups-of-signals)
@@ -23,7 +23,9 @@ This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**.
 - [Known limitations](#Known-limitations)
 - [Links](#Links)
 - [Contact us](#Contact-us)
+<!-- TOC END -->
 
+<!-
 [TOC]
 
 - TOC END -->

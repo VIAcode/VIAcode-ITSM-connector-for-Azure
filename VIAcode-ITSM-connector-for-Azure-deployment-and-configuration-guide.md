@@ -20,7 +20,7 @@ This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
   
 - [Technical details](#technical-details)
   - [Supported alert types](#supported-alert-types)
-- [How-to guide](#how-to guide)
+- [How-to guide](#how-to-guide)
 <!-- TOC END -->
 
 
