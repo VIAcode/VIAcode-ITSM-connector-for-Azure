@@ -22,7 +22,7 @@ This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**.
 	- [Backward synchronization](#Backward-synchronization)
 - [Known limitations](#Known-limitations)
 - [Links](#Links)
-- [Contact us](#Contact us)
+- [Contact us](#Contact-us)
 <!-- TOC END -->
 
 [TOC]
