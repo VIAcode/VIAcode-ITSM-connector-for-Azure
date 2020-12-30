@@ -11,6 +11,7 @@ This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**.
 	- [Managing different subscriptions](#Managing-different-subscriptions)
 - [Azure Monitor Alerts](#Azure-Monitor-Alerts)
 	- [Azure Monitor alert detection](#Azure-Monitor-alert-detection)
+	- [Excluding specific Azure Monitor alerts](#Excluding-specific-Azure-Monitor-alerts)
 - [Cost Management budget alerts](#Cost-Management-budget-alerts)
 	- [Budget alert detection](#Budget-alert-detection)
 - [Azure Advisor recommendations](#Azure-Advisor-recommendations)
@@ -96,6 +97,22 @@ Here you can see ticket for active Azure Monitor Metric Alert. Ticket contains a
 ### Repeat Count
 
 "Repeat count" setting for Azure Monitor alerts will indicate the number of alert repeats for the same resource. 
+
+### Excluding specific Azure Monitor alerts
+
+It is possible to exclude Azure Monitor alerts so that tickets are not created/updated for them.
+To this end there is a feature called "Azure Monitor alerts" Rules.
+By default there is single rule arranging that all alerts are processed.
+If you need to exclude some alerts from processing you can delete that default rule and add another rule(s) specifying with regular expressions alerts with what names to process.
+To do this open Connector Managed App and select "Azure Monitor alerts" Rules tab.
+Check existing "All alerts" rule and click "Delete", click "Yes".
+![azureMonitorAlertsRuleDelete](./media/azureMonitorAlertsRuleDelete.png)
+After that click Add, fill Rule's Regular Expression and optionally leave a comment and click "Review + submit".
+![azureMonitorAlertsRuleAdd1](./media/azureMonitorAlertsRuleAdd1.png)
+Click "Submit":
+![azureMonitorAlertsRuleAdd2](./media/azureMonitorAlertsRuleAdd2.png)
+![azureMonitorAlertsRuleList](./media/azureMonitorAlertsRuleList.png)
+After that only alerts whose names match regular expression you specified in a rule will be processed and tickets in VIAcode Incident Management System will be created and updated only for those alerts.
 
 
 ## Cost Management budget alerts
