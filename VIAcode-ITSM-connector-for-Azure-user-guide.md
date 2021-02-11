@@ -19,7 +19,6 @@ This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**.
 - [Azure Security Center alerts](#Azure-Security-Center-alerts)
 	- [Secuirity alert detection](#Secuirity-alert-detection)
 - [Features](#Features)
-	- [Sync Azure signals](#Sync-Azure-signals)
 	- [Backward synchronization](#Backward-synchronization)
 - [Known limitations](#Known-limitations)
 - [Links](#Links)
@@ -98,22 +97,6 @@ Here you can see ticket for active Azure Monitor Metric Alert. Ticket contains a
 
 "Repeat count" setting for Azure Monitor alerts will indicate the number of alert repeats for the same resource. 
 
-### Excluding specific Azure Monitor alerts
-
-It is possible to exclude Azure Monitor alerts so that tickets are not created/updated for them.
-To this end there is a feature called "Azure Monitor alerts" Rules.
-By default there is single rule arranging that all alerts are processed.
-If you need to exclude some alerts from processing you can delete that default rule and add another rule(s) specifying with regular expressions alerts with what names to process.
-To do this open Connector Managed App and select "Azure Monitor alerts" Rules tab.
-Check existing "All alerts" rule and click "Delete", click "Yes".
-![azureMonitorAlertsRuleDelete](./media/azureMonitorAlertsRuleDelete.png)
-After that click Add, fill Rule's Regular Expression and optionally leave a comment and click "Review + submit".
-![azureMonitorAlertsRuleAdd1](./media/azureMonitorAlertsRuleAdd1.png)
-Click "Submit":
-![azureMonitorAlertsRuleAdd2](./media/azureMonitorAlertsRuleAdd2.png)
-![azureMonitorAlertsRuleList](./media/azureMonitorAlertsRuleList.png)
-After that only alerts whose names match regular expression you specified in a rule will be processed and tickets in VIAcode Incident Management System will be created and updated only for those alerts.
-
 
 ## Cost Management budget alerts
 ### Introduction
@@ -189,34 +172,6 @@ On image below you can see ticket for active Security alert. Ticket contains ale
 
 ## Features
 
-### Sync Azure signals
-
-The [Sync Azure signals] button allows you obtain active **Security Alerts** and **Advisor recommendations** created in your subscription **prior** VIAcode ITSM connector for Azure installation.
-
-To get prior incidents and recommendations in your ITSM tool perform the following steps: 
-
-**Step1**
-
-Go to Resource Group where the Managed Application installed (application named "VIAcode-ITSM-connector-for-Azure"). 
-
-**Step2**
-
-Open the  managed application named "VIAcode-ITSM-connector-for-Azure"
-
-**Step3**
-
-Click [Sync Azure signals] button 
-
-![syncAzureSignalsbtn](./media/syncAzureSignalsbtn.png)
-
-
-
-**Step4**
-
-Select types of signals to retrieve and click [Review+submit ] in Azure
-
-![syncParameters-alerts-recommendations](./media/syncParameters-alerts-recommendations.png)
-
 ### Backward synchronization
 
 Backward synchronization capability in VIAcode ITSM Connector allows you to close Azure signals right from the ITSM system without necessity go to Azure portal. 
@@ -224,6 +179,21 @@ Backward synchronization capability in VIAcode ITSM Connector allows you to clos
 Backward synchronization option requires "Contributor" permissions to subscription. To check if your connector has Contributor permissions follow the [Connector configuration Guide](https://github.com/VIAcode/VIAcode-ITSM-connector-for-Azure/blob/main/VIAcode-ITSM-connector-for-Azure-deployment-and-configuration-guide.md#how-to-setup). 
 
 To see integrations that support backward synchronization follow the [Overview](#Overview) table  in guide.
+
+### Excluding specific Azure Monitor alerts
+
+It is possible to exclude Azure Monitor alerts so that tickets are not created/updated for them.
+There is a feature called "Azure Monitor alerts" Rules. By default there is single rule arranging that all alerts are processed.
+If you need to exclude some alerts from processing you can delete that default rule and add another rule(s) specifying with regular expressions alerts names which you would like to receive from Azure using Connector. 
+To do this open Connector Managed App and select "Azure Monitor alerts" Rules tab.
+Check existing "All alerts" rule and click "Delete", click "Yes".
+![azureMonitorAlertsRuleDelete](./media/azureMonitorAlertsRuleDelete.png)
+After that click Add, fill Rule's Regular Expression and optionally leave a comment and click "Review + submit".
+![azureMonitorAlertsRuleAdd1](./media/azureMonitorAlertsRuleAdd1.png)
+Click "Submit":
+![azureMonitorAlertsRuleAdd2](./media/azureMonitorAlertsRuleAdd2.png)
+![azureMonitorAlertsRuleList](./media/azureMonitorAlertsRuleList.png)
+After that only alerts whose names match regular expression you specified in a rule will be processed and tickets in VIAcode Incident Management System will be created and updated only for those alerts.
 
 ## Known limitations
 
