@@ -113,7 +113,7 @@ In order to configure alert state synchronization please provide VIAcode ITSM co
 Installation of VIAcode ITSM for Azure requires 2 resource groups:
 
 - The First one for the application itself (Managed Application location).
-- The Second is for the managed resources that the application requires (e.g. "mrg-viacode-itsm-z-<id>").
+- The Second is for the managed resources that the application requires (e.g. "mrg-viacode-itsm-z-`<guid>`").
 
 ### Steps to Remove Application and Managed Resource Group
 **Step 1:**
