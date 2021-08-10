@@ -68,7 +68,7 @@ Find VIAcode ITSM connector for Azure and click on it.
 
 ![Private Offers + Plans](./media/privateOffers.png)
 
-Select subscription to install connector to and press Create.
+Select subscription to install connector to and click Create.
 
 ![Create](./media/privateCreate.png)
 
