@@ -4,7 +4,9 @@ This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
 <!-- TOC -->
 
 - [Before you begin](#before-you-begin)
-  - [Deploy from Azure Marketplace](#deploy-from-azure-marketplace)
+  - [Deploy](#deploy)
+    - [VIAcode Managed Service customers](#viacode-managed-service-customers)
+    - [Not VIAcode Managed Service customers](#not-viacode-managed-service-customers)
     - [Pricing](#pricing)
 
 - [Configuration of VIAcode ITSM connector for Azure](#configuration-of-viacode-itsm-connector-for-azure)
@@ -38,7 +40,32 @@ Verify that your account user type is not Guest in the chosen tenant.
 
 [Guest](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) accounts have limited permissions. Deployment under a guest account will fail.
 
-## Deploy from Azure Marketplace
+## Deploy
+
+### VIAcode Managed Service customers
+
+If you are a VIAcode Managed Service customer then to install VIAcode ITSM connector for Azure open Azure Portal and click Create a resource.
+
+![Create a resource](./media/createAResource.png)
+
+Type VIAcode in a "Search services and marketplace" box and press Enter.
+
+![Create a resource](./media/createAResourceSearch.png)
+
+You will see panel with text "You have Private Offers available" and "View Private Offers + Plans hyperlink" besides.
+Click on it.
+
+![View Private Offers + Plans](./media/viewPrivateOffers.png)
+
+Find VIAcode ITSM connector for Azure and click on it.
+
+![Private Offers + Plans](./media/privateOffers.png)
+
+Select subscription to install connector to and press Create.
+
+![Create](./media/privateCreate.png)
+
+### Not VIAcode Managed Service customers
 
 - [Navigate](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/viacode_consulting-1089577.viacode-itsm-connector-for-azure) to Microsoft Azure Marketplace and find "VIAcode ITSM connector for Azure" offer.
 ![Azure Market Place](./media/azureMarketPlaceConnector.png)
