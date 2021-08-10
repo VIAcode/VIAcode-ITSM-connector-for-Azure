@@ -10,6 +10,8 @@ This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
 - [Configuration of VIAcode ITSM connector for Azure](#configuration-of-viacode-itsm-connector-for-azure)
   - [Basics](#basics)
   - [Settings](#settings)
+    - [ServiceDesk Plus MSP (for VIAcode Managed Service customers)](#servicedesk-plus-msp)
+    - [VIAcode Incident Management System](#viacode-incident-management-system)
   - [Review and create](#review-and-create)
   - [Alert state backward synchronization](#alert-state-backward-synchronization)
     - [Overview](#overview)
@@ -67,11 +69,23 @@ The total cost of running VIAcode ITSM connector for Azure is a combination of t
 
 ## Settings
 
+### ServiceDesk Plus MSP (for VIAcode Managed Service customers)
+
+Ask us for ServiceDesk Plus MSP API Key and Account name.
+
+![Azure AD Integration](./media/connectorSettingsSDP.png)
+
+- Enter API Key.
+- Enter Account name.
+- Press "Next : Review + create >" button.
+
+### VIAcode Incident Management System
+
 You have to specify VIAcode Incident Management System hostname (FQDN) and administrator user credentials.
 ITSM Connector will automatically create new VIMS user. All tickets are created on behalf of this user.
 To create user we need to know Administrators credentials, Organisation Name and Role for new user.
 
-![Azure AD Integration](./media/connectorSettings.png)
+![Azure AD Integration](./media/connectorSettingsVIMS.png)
 
 - Set VIAcode Incident Management System hostname.
 - Set admin user login ("admin" by default).
