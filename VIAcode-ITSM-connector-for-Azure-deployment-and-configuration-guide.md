@@ -59,7 +59,7 @@ Do not select VIAcode ITSM connector for Azure from dropdown.
 
 ![Create a resource](./media/createAResourceSearch.png)
 
-You will see panel with text "You have Private Offers available" and "View Private Offers + Plans hyperlink" besides.
+You will see panel with text "You have Private Offers available" and "View Private Offers + Plans" hyperlink besides.
 Click on it.
 
 ![View Private Offers + Plans](./media/viewPrivateOffers.png)
