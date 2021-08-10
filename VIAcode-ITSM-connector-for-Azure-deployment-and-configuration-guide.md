@@ -49,6 +49,12 @@ If you are a VIAcode Managed Service customer then to install VIAcode ITSM conne
 ![Create a resource](./media/createAResource.png)
 
 Type VIAcode in a "Search services and marketplace" box and press Enter.
+---
+**NOTE**
+
+Do not select VIAcode ITSM connector for Azure from dropdown.
+
+---
 
 ![Create a resource](./media/createAResourceSearch.png)
 
