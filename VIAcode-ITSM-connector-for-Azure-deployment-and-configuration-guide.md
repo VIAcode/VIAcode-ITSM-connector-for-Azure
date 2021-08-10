@@ -10,7 +10,7 @@ This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
 - [Configuration of VIAcode ITSM connector for Azure](#configuration-of-viacode-itsm-connector-for-azure)
   - [Basics](#basics)
   - [Settings](#settings)
-    - [ServiceDesk Plus MSP (for VIAcode Managed Service customers)](#servicedesk-plus-msp)
+    - [ServiceDesk Plus MSP (for VIAcode Managed Service customers)](#servicedesk-plus-msp-for-viacode-managed-service-customers)
     - [VIAcode Incident Management System](#viacode-incident-management-system)
   - [Review and create](#review-and-create)
   - [Alert state backward synchronization](#alert-state-backward-synchronization)
