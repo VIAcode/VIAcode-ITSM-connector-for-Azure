@@ -1,10 +1,11 @@
-# VIAcode ITSM connector for Azure user guide
+# VIAcode ITSM connector for Azure for VIMS user guide
 
-This guide is based on a version of VIAcode ITSM Connector for Azure **1.1**. 
+This guide is based on a version of VIAcode ITSM Connector for Azure for VIMS **1.1**. 
 
 
 <!-- TOC -->
 - [Overview](#Overview)
+- [Technical details](#Technical-details)
 - [VIMS](#VIMS)
 	- [Groups of signals](#Groups-of-signals)
 	- [New incidents group](#New-incidents-group)

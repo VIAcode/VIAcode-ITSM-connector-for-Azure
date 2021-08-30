@@ -18,12 +18,9 @@ This guide is based on version **1.0** of VIAcode ITSM Connector for Azure for *
     - [How to setup](#how-to-setup)
 - [Uninstallation of VIAcode ITSM connector for Azure](#uninstallation-of-viacode-itsm-connector-for-azure)
   - [Deletion Notes](#deletion-notes)
-  - [Steps to Remove Application and Managed Resource Group](#steps-to-remove-application-and-managed-resource-group)  
-  
-- [Technical details](#technical-details)
-  - [Supported alert types](#supported-alert-types)
+  - [Steps to Remove Application and Managed Resource Group](#Steps-to-Remove-Application-and-Managed-Resource-Group)
 - [How-to guide](#how-to-guide)
-<!-- TOC END -->
+    <!-- TOC END -->
 
 
 
