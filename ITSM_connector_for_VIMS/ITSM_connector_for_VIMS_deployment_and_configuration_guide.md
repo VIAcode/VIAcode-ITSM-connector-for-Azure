@@ -1,5 +1,5 @@
-# VIAcode ITSM connector for Azure deployment and configuration guide
-This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
+# VIAcode ITSM connector for Azure for VIMS deployment and configuration guide
+This guide is based on version **1.1** of VIAcode ITSM Connector for Azure for VIMS.
 
 <!-- TOC -->
 
@@ -9,11 +9,9 @@ This guide is based on version **1.1** of VIAcode ITSM Connector for Azure.
     - [Not VIAcode Managed Service customers](#not-viacode-managed-service-customers)
     - [Pricing](#pricing)
 
-- [Configuration of VIAcode ITSM connector for Azure](#configuration-of-viacode-itsm-connector-for-azure)
+- [Configuration of VIAcode ITSM connector for Azure for VIMS](#configuration-of-viacode-itsm-connector-for-azure-for-VIMS)
   - [Basics](#basics)
-  - [Settings](#settings)
-    - [ServiceDesk Plus MSP (for VIAcode Managed Service customers)](#servicedesk-plus-msp-for-viacode-managed-service-customers)
-    - [VIAcode Incident Management System](#viacode-incident-management-system)
+  - [VIAcode Incident Management System](#viacode-incident-management-system)
   - [Review and create](#review-and-create)
   - [Alert state backward synchronization](#alert-state-backward-synchronization)
     - [Overview](#overview)
@@ -89,7 +87,7 @@ You will be taken to Azure Portal to complete installation:
 
 The total cost of running VIAcode ITSM connector for Azure is a combination of the selected software plan and cost of the Azure infrastructure on which you will be running it. The Azure infrastructure cost might vary with regards to the region, type of subscription and other discounts.
 
-## Configuration of VIAcode ITSM connector for Azure
+## Configuration of VIAcode ITSM connector for Azure for VIMS
 
 ## Basics
 
@@ -101,19 +99,7 @@ The total cost of running VIAcode ITSM connector for Azure is a combination of t
 - Provide a name for your application's managed resource group.
 - Press "Next : Settings >" button.
 
-## Settings
-
-### ServiceDesk Plus MSP (for VIAcode Managed Service customers)
-
-Ask us for ServiceDesk Plus MSP API Key and Account name.
-
-![Azure AD Integration](./media/connectorSettingsSDP.png)
-
-- Enter API Key.
-- Enter Account name.
-- Press "Next : Review + create >" button.
-
-### VIAcode Incident Management System
+## VIAcode Incident Management System
 
 You have to specify VIAcode Incident Management System hostname (FQDN) and administrator user credentials.
 ITSM Connector will automatically create new VIMS user. All tickets are created on behalf of this user.
@@ -161,7 +147,7 @@ In order to configure alert state synchronization please provide VIAcode ITSM co
 Installation of VIAcode ITSM for Azure requires 2 resource groups:
 
 - The First one for the application itself (Managed Application location).
-- The Second is for the managed resources that the application requires (e.g. "mrg-viacode-itsm-z-`<guid>`").
+- The Second is for the managed resources that the application requires (e.g. "mrg-viacode-itsm-z-`<id>`").
 
 ### Steps to Remove Application and Managed Resource Group
 **Step 1:**
@@ -176,37 +162,10 @@ Deletion the Managed Application will consequently delete the second resource gr
 **Step 3:** (optional)
 If the First Resource Group is empty - only Managed Application was stored there - you should also delete this Resource Group as well.
 
-## Technical details
-
-VIAcode ITSM connector for Azure supports all Azure recommendations and most alerts.
-The following section explicates list of supported alerts.
-
-### Supported alert types
-
-VIAcode ITSM connector for Azure can process the following Azure alert types:
-
-- Metric Alerts
-
-  - Platform
-- Log Alerts
-
-  - Log Analytics
-  - Application Insights
-- Activity Log Alerts
-
-  - Activity Log - Administrative
-  - Activity Log - Policy
-  - Activity Log - Autoscale
-  - Activity Log - Security
-  - Service Health
-  - Resource Health
-- Security Center Alerts
-- Cost alerts: budget alerts
-
 
 
 ## How-to guide
-For more information about VIAcode ITSM connector features and use cases please read ["VIAcode ITSM connector for Azure user guide"](VIAcode-ITSM-connector-for-Azure-user-guide.md)
+For more information about VIAcode ITSM connector features and use cases please read ["VIAcode ITSM connector for Azure for VIMS user guide"](ITSM_connector_VIMS_user_guide.md)
 
 
 

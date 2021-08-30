@@ -43,6 +43,33 @@ Here you can see an overview table of all supported features in VIAcode ITSM con
 | Budget Alerts                                  | no                       | All alerts in subscription with "Active" state               |                                | VIMS                |                                                              |
 | Security Center Alerts                         | yes                      | All active  Security Center Alerts created since connector installation | Azure Defender must be enabled | VIMS                | It is possible sync prior created active alerts using [Sync Azure signals]  option |
 | Advisor Recommendations                        | no                       | All new and updated Recommendations created since connector installation |                                | VIMS                | It is possible sync prior created recommendations using [Sync Azure signals]  option |
+## Technical details
+
+VIAcode ITSM connector for Azure supports all Azure recommendations and most alerts.
+The following section explicates list of supported alerts.
+
+### Supported alert types
+
+VIAcode ITSM connector for Azure can process the following Azure alert types:
+
+- Metric Alerts
+
+  - Platform
+- Log Alerts
+
+  - Log Analytics
+  - Application Insights
+- Activity Log Alerts
+
+  - Activity Log - Administrative
+  - Activity Log - Policy
+  - Activity Log - Autoscale
+  - Activity Log - Security
+  - Service Health
+  - Resource Health
+- Security Center Alerts
+- Cost alerts: budget alerts
+
 ## VIMS 
 
 In order to manage different Azure notifications ITSM connector needs to be connected to IT service management system. VIAcode ITSM connector for Azure supports integration with ITSM ticketing system VIMS that stands for VIAcode Incident Management System.
