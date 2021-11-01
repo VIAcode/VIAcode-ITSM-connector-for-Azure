@@ -1,5 +1,5 @@
 # VIAcode ITSM connector for Azure for ServiceDesk Plus MSP deployment and configuration guide
-This guide is based on version **1.0** of VIAcode ITSM Connector for Azure for **ServiceDesk Plus MSP**.
+This guide is based on version **1.2** of VIAcode ITSM Connector for Azure for **ServiceDesk Plus MSP**.
 
 <!-- TOC -->
 
@@ -17,9 +17,9 @@ This guide is based on version **1.0** of VIAcode ITSM Connector for Azure for *
 - [Alert state backward synchronization](#alert-state-backward-synchronization)
     - [Overview](#overview)
     - [How to setup](#how-to-setup)
-- [Uninstallation of VIAcode ITSM connector for Azure](#uninstallation-of-viacode-itsm-connector-for-azure)
+- [Uninstallation of connector](#uninstallation-of-connector)
   - [Deletion Notes](#deletion-notes)
-  - [Steps to Remove Application and Managed Resource Group](#Steps-to-Remove-Application-and-Managed-Resource-Group)
+  - [Steps to Remove Application and Managed Resource Group](#steps-to-remove-application-and-managed-resource-group)
 - [How-to guide](#how-to-guide)
     <!-- TOC END -->
 
@@ -28,7 +28,7 @@ This guide is based on version **1.0** of VIAcode ITSM Connector for Azure for *
 ## Before you begin
 ### Prerequisites
 #### Service Desk Plus version
-Supported Service Desk Plus build version: **10529** and higher. 
+Supported Service Desk Plus build version: **10528** and higher. 
 #### Account is Not Guest
 Verify that your account user type is not Guest in the chosen tenant.
 
