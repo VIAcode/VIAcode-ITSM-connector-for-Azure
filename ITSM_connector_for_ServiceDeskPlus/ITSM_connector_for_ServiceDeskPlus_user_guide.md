@@ -1,28 +1,27 @@
 # VIAcode ITSM connector for Azure for ServiceDesk Plus MSP user guide
 
-This guide is based on version **1.0** of VIAcode ITSM Connector for Azure for **ServiceDesk Plus MSP**.
+This guide is based on version **1.2** of VIAcode ITSM Connector for Azure for **ServiceDesk Plus MSP**.
 
 
 <!-- TOC -->
-- [Overview](#Overview)
-- [ServiceDesk Plus MSP](#ServiceDesk-Plus-MSP)
-	- [Groups of requests](#Groups-of-requests)
-	- [New incidents group](#New-incidents-group)
-	- [Managing different subscriptions](#Managing-different-subscriptions)
-- [Azure Monitor Alerts](#Azure-Monitor-Alerts)
-	- [Azure Monitor alert detection](#Azure-Monitor-alert-detection)
-	- [Excluding specific Azure Monitor alerts](#Excluding-specific-Azure-Monitor-alerts)
-- [Cost Management budget alerts](#Cost-Management-budget-alerts)
-	- [Budget alert detection](#Budget-alert-detection)
-- [Azure Advisor recommendations](#Azure-Advisor-recommendations)
-	- [Recommendation detection](#Recommendation-detection)
-- [Azure Security Center alerts](#Azure-Security-Center-alerts)
-	- [Secuirity alert detection](#Secuirity-alert-detection)
-- [Features](#Features)
-	- [Backward synchronization](#Backward-synchronization)
-- [Known limitations](#Known-limitations)
-- [Links](#Links)
-- [Contact us](#Contact-us)
+- [Overview](#overview)
+- [ServiceDesk Plus MSP](#servicedesk-plus-msp)
+	- [Groups of requests](#groups-of-requests)
+	- [Managing different subscriptions](#managing-different-subscriptions)
+- [Azure Monitor Alerts](#azure-monitor-alerts)
+	- [Azure Monitor alert detection](#azure-monitor-alert-detection)
+	- [Excluding specific Azure Monitor alerts](#excluding-specific-azure-monitor-alerts)
+- [Cost Management budget alerts](#cost-management-budget-alerts)
+	- [Budget alert detection](#budget-alert-detection)
+- [Azure Advisor recommendations](#azure-advisor-recommendations)
+	- [Recommendation detection](#recommendation-detection)
+- [Azure Security Center alerts](#azure-security-center-alerts)
+	- [Security alert detection](#security-alert-detection)
+- [Features](#features)
+	- [Backward synchronization](#backward-synchronization)
+- [Known limitations](#known-limitations)
+- [Links](#links)
+- [Contact us](#contact-us)
 <!-- TOC END -->
 
 [TOC]

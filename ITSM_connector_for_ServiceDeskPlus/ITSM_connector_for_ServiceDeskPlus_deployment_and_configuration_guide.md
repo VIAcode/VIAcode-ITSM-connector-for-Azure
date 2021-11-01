@@ -1,10 +1,11 @@
 # VIAcode ITSM connector for Azure for ServiceDesk Plus MSP deployment and configuration guide
-This guide is based on version **1.0** of VIAcode ITSM Connector for Azure for **ServiceDesk Plus MSP**.
+This guide is based on version **1.2** of VIAcode ITSM Connector for Azure for **ServiceDesk Plus MSP**.
 
 <!-- TOC -->
 
 - [Before you begin](#before-you-begin)
-  - [Deploy](#deploy)
+- [Upgradability](#upgradability)
+- [Deploy](#deploy)
     - [VIAcode Managed Service customers](#viacode-managed-service-customers)
     - [Not VIAcode Managed Service customers](#not-viacode-managed-service-customers)
     - [Pricing](#pricing)
@@ -16,16 +17,19 @@ This guide is based on version **1.0** of VIAcode ITSM Connector for Azure for *
 - [Alert state backward synchronization](#alert-state-backward-synchronization)
     - [Overview](#overview)
     - [How to setup](#how-to-setup)
-- [Uninstallation of VIAcode ITSM connector for Azure](#uninstallation-of-viacode-itsm-connector-for-azure)
+- [Uninstallation of connector](#uninstallation-of-connector)
   - [Deletion Notes](#deletion-notes)
-  - [Steps to Remove Application and Managed Resource Group](#Steps-to-Remove-Application-and-Managed-Resource-Group)
+  - [Steps to Remove Application and Managed Resource Group](#steps-to-remove-application-and-managed-resource-group)
 - [How-to guide](#how-to-guide)
     <!-- TOC END -->
 
 
 
 ## Before you begin
-
+### Prerequisites
+#### Service Desk Plus version
+Supported Service Desk Plus build version: **10528** and higher. 
+#### Account is Not Guest
 Verify that your account user type is not Guest in the chosen tenant.
 
 - Sign in to the [Azure Portal](https://portal.azure.com/).
@@ -34,6 +38,7 @@ Verify that your account user type is not Guest in the chosen tenant.
 ![Guest type account](./media/guestAccount.png)
 
 [Guest](https://docs.microsoft.com/azure/active-directory/b2b/user-properties) accounts have limited permissions. Deployment under a guest account will fail.
+
 
 ## Upgradability
 
