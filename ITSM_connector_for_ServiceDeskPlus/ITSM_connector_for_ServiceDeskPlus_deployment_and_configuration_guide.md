@@ -29,6 +29,8 @@ This guide is based on version **1.2** of VIAcode ITSM Connector for Azure for *
 ### Prerequisites
 #### Service Desk Plus version
 Supported Service Desk Plus build version: **10528** and higher. 
+#### Access control to subscription: Owner role
+In order to enforce backward sync , Contributor role must be assigned for the Managed application. To assign "Contributor" role your must have "Owner" permissions. 
 #### Account is Not Guest
 Verify that your account user type is not Guest in the chosen tenant.
 
